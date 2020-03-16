@@ -9,12 +9,15 @@ repositories {
     
     mavenLocal() // This is required so that the herolanguage (which you previously 'mvn install' using Tycho) is found  
     jcenter()
+            maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
 }
 
 dependencies {
     xtextLanguages 'my.mavenized.herolanguage:my.mavenized.herolanguage:1.0.0-SNAPSHOT'
 
-    implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.21.0'
+    implementation 'org.eclipse.xtend:org.eclipse.xtend.lib:2.22.0-SNAPSHOT'
     testImplementation 'junit:junit:4.12'
 }
 
